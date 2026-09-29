@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RideScore Lab | AI riding-safety analytics for two-wheelers</title>
+<meta name="description" content="RideScore measures how motorcycles and delivery scooters are actually ridden, using low-cost IMU sensors and AI, to produce rider safety scores, road risk maps, and intervention effect reports.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230B5FFF'/%3E%3Ctext x='32' y='43' font-size='30' text-anchor='middle' fill='white' font-family='Arial' font-weight='700'%3ERS%3C/text%3E%3C/svg%3E">
+<style>
+  :root { --ink:#0f172a; --sub:#475569; --line:#e2e8f0; --brand:#0B5FFF; --bg:#ffffff; --soft:#f8fafc; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", Roboto, sans-serif; color:var(--ink); background:var(--bg); font-size:18px; line-height:1.6; }
+  a { color:var(--brand); text-decoration:none; }
+  .wrap { max-width:1080px; margin:0 auto; padding:0 24px; }
+  header { border-bottom:1px solid var(--line); }
+  header .wrap { display:flex; justify-content:space-between; align-items:center; height:72px; }
+  .logo { font-weight:800; font-size:22px; letter-spacing:-0.02em; }
+  .logo span { color:var(--brand); }
+  nav a { margin-left:24px; color:var(--sub); font-size:16px; }
+  .hero { padding:88px 0 72px; }
+  .eyebrow { color:var(--brand); font-weight:700; font-size:15px; letter-spacing:0.06em; text-transform:uppercase; }
+  h1 { font-size:48px; line-height:1.15; letter-spacing:-0.03em; margin:12px 0 20px; max-width:860px; }
+  .lead { font-size:21px; color:var(--sub); max-width:760px; }
+  .ko { font-size:17px; color:var(--sub); margin-top:12px; }
+  .cta { display:inline-block; margin-top:32px; background:var(--brand); color:#fff; padding:14px 26px; border-radius:10px; font-weight:700; }
+  section { padding:72px 0; border-top:1px solid var(--line); }
+  h2 { font-size:32px; letter-spacing:-0.02em; margin:0 0 12px; }
+  .sec-lead { color:var(--sub); max-width:760px; margin:0 0 36px; }
+  .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+  .card { background:var(--soft); border:1px solid var(--line); border-radius:14px; padding:26px; }
+  .card h3 { margin:0 0 10px; font-size:20px; }
+  .card p { margin:0; color:var(--sub); font-size:17px; }
+  .num { font-size:36px; font-weight:800; color:var(--brand); letter-spacing:-0.02em; }
+  .steps { counter-reset: s; }
+  .steps .card h3::before { counter-increment:s; content: counter(s) ". "; color:var(--brand); }
+  ul.clean { padding-left:20px; color:var(--sub); margin:0; }
+  ul.clean li { margin:6px 0; }
+  .src { font-size:14px; color:#64748b; margin-top:20px; }
+  footer { border-top:1px solid var(--line); padding:36px 0 48px; color:var(--sub); font-size:16px; }
+  @media (max-width: 860px) { h1 { font-size:36px; } .grid { grid-template-columns:1fr; } nav { display:none; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="logo">RideScore<span> Lab</span></div>
+    <nav><a href="#problem">Problem</a><a href="#solution">Solution</a><a href="#technology">Technology</a><a href="#contact">Contact</a></nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <div class="eyebrow">AI riding-safety analytics for two-wheelers</div>
+    <h1>We measure how motorcycles are actually ridden, before a crash happens.</h1>
+    <p class="lead">RideScore turns low-cost IMU and GPS data into rider safety scores, road risk maps, and before/after reports that show whether safety training and incentives actually work.</p>
+    <p class="ko">라이드스코어는 보급형 IMU 센서와 GPS로 이륜차 위험운전을 측정해 라이더 안전점수, 도로 위험지도, 교육 전후 효과 분석을 제공하는 이륜차 AI 안전 솔루션입니다.</p>
+    <a class="cta" href="mailto:yeseo@ridescorelab.com">Contact us</a>
+  </div>
+
+  <section id="problem">
+    <div class="wrap">
+      <h2>The problem</h2>
+      <p class="sec-lead">Delivery riding is one of the most dangerous jobs in Korea, yet nobody measures riding behavior before a crash. Commercial trucks and buses have digital tachographs (DTG) and risk-driving analytics. Two-wheelers do not, and four-wheel scoring misreads normal leaning turns as dangerous.</p>
+      <div class="grid">
+        <div class="card"><div class="num">4 years</div><p>Baemin's delivery logistics subsidiary has had the most approved industrial-accident claims of any workplace in Korea (2022 to 2025).</p></div>
+        <div class="card"><div class="num">~20,000</div><p>Motorcycle traffic crashes per year in Korea, with about 500 deaths per year (2018 to 2022 average).</p></div>
+        <div class="card"><div class="num">20 to 30%</div><p>Personal-injury premium cut pushed by Korea's Financial Supervisory Service motorcycle insurance reform (Dec 2025), without behavior data to price risk.</p></div>
+      </div>
+      <p class="src">Sources: Korea Workers' Compensation and Welfare Service data via National Assembly, Korea Road Traffic Authority, Financial Supervisory Service (2025.12).</p>
+    </div>
+  </section>
+
+  <section id="solution">
+    <div class="wrap">
+      <h2>What RideScore delivers</h2>
+      <p class="sec-lead">One riding-data platform for the three groups that pay for two-wheeler safety.</p>
+      <div class="grid">
+        <div class="card"><h3>Delivery platforms</h3><p>Personalized safety training based on each rider's own risk patterns, plus real-time risk alerts.</p></div>
+        <div class="card"><h3>Public agencies</h3><p>Quantified accident-prevention effects by comparing risky-riding rates before and after training.</p></div>
+        <div class="card"><h3>Insurers</h3><p>A two-wheeler-specific safety score to price risk and limit losses from mandated premium cuts.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="technology">
+    <div class="wrap">
+      <h2>Technology</h2>
+      <p class="sec-lead">Built on peer-reviewed research on delivery-rider safety.</p>
+      <div class="grid steps">
+        <div class="card"><h3>Collect</h3><p>Low-cost IMU + GPS units mounted anywhere on the bike (under the seat, on the delivery box), with smartphone sensing in parallel.</p></div>
+        <div class="card"><h3>Calibrate &amp; detect</h3><p>Two-stage self-supervised calibration restores the vehicle frame (gravity alignment error 7.65° to 1.99°, about 1/5 the compute of a Kalman filter). Three-layer detection: data-quality rules, time-series anomaly detection, and motorcycle-dynamics checks (friction circle, sideslip). Controlled-test F1 0.73.</p></div>
+        <div class="card"><h3>Score &amp; report</h3><p>Rider safety score (0 to 100, 5 grades), link-level road risk map, and intervention effect analysis.</p></div>
+      </div>
+      <ul class="clean" style="margin-top:28px">
+        <li>First-author paper in <em>Accident Analysis &amp; Prevention</em>; co-author in <em>Transportation Research Record</em></li>
+        <li>PhD dissertation on two-wheeler riding safety, Hanyang University (2026)</li>
+        <li>Founder is the inventor on two pending patent applications (sensor misalignment correction, hierarchical anomaly detection)</li>
+        <li>Selected for Antler AI Residency, Seoul (2026)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <h2>Contact</h2>
+      <p class="sec-lead">Yeseo Gu, PhD, Founder<br><a href="mailto:yeseo@ridescorelab.com">yeseo@ridescorelab.com</a> · <a href="https://www.linkedin.com/in/yeseogu/">LinkedIn</a><br>Seoul, Republic of Korea</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 RideScore Lab. All rights reserved.</div>
+</footer>
+</body>
+</html>
